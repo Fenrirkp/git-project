@@ -1,0 +1,16 @@
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-width(@w, @h) when not (@w = @h) {
+	width:(@w/@h)*1em;
+}
+
+{{#shapes}}
+.icon-{{base}} {
+	.icon-width({{width.inner}}, {{height.inner}});
+}
+{{/shapes}}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home page</title>
+	<script>
+		function loadFont(a,b,c,d){function e(){if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{}),b=a.load();try{b.then(null,function(){})}catch(c){}return"loading"===a.status}var f=navigator.userAgent,g=!window.addEventListener||f.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!f.match(/Chrome/);if(!g){var h={};try{h=localStorage||{}}catch(i){}var j="x-font-"+a,k=j+"url",l=j+"css",m=h[k],n=h[l],o=document.createElement("style");if(o.rel="stylesheet",document.head.appendChild(o),!n||m!==b&&m!==c){var p=c&&e()?c:b,q=new XMLHttpRequest;q.open("GET",p),q.onload=function(){q.status>=200&&q.status<400&&(h[k]=p,h[l]=q.responseText,d||(o.textContent=q.responseText))},q.send()}else o.textContent=n}};
+		loadFont('fonts', 'css/fonts-woff.css');
+	</script>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+	<script>
+		!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);
+		n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<script type="text/javascript">
+		var ajax = new XMLHttpRequest();
+		ajax.open("GET", "img/sprite.svg", true);
+		ajax.send();
+		ajax.onload = function() {
+			var div = document.createElement("div");
+			div.innerHTML = ajax.responseText;
+			div.style.display = 'none';
+			document.body.insertBefore(div, document.body.firstChild);
+		}
+	</script>
+
+	<header id="p_header" class="p_header">
+		<div class="head_bar1">
+			<div class="head_contacts">Custom Care: 888-23-4567</div>
+			<div class="head_panel">
+				<div class="icon_btn head_currency">$ us<span class="tgl"></span></div>
+				<div class="icon_btn head_account">
+					<svg class="icon icon-contact_user">
+						<use xlink:href="img/sprite.svg#contact_user"></use>
+					</svg>
+					My account
+				</div>
+				<div class="icon_btn head_search">
+					<svg class="icon icon-search">
+						<use xlink:href="img/sprite.svg#search"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="head_bar2">
+			<div class="head_logo">
+				<svg class="icon icon-logo">
+					<use xlink:href="img/sprite.svg#logo"></use>
+				</svg>
+			</div>
+			<div class="head_cart">
+				<div class="item cart_menu">
+					Your cart
+					<span class="tgl"></span>
+				</div>
+				<div class="item cart_info">
+					<svg class="icon icon-cart">
+						<use xlink:href="img/sprite.svg#cart"></use>
+					</svg>
+					0 items | $ 0
+				</div>
+			</div>
+			<nav class="head_menu main_menu">
+				<div class="btn menu_button">
+					Menu
+					<svg class="icon icon-hamb">
+						<use xlink:href="img/sprite.svg#hamb"></use>
+					</svg>
+				</div>
+				<ul class="menu_list">
+					<li class="menu_item">New<span class="tgl"></span></li>
+					<li class="menu_item">Designers<span class="tgl"></span></li>
+					<li class="menu_item">Women<span class="tgl"></span></li>
+					<li class="menu_item">Men<span class="tgl"></span></li>
+					<li class="menu_item">Clearence<span class="tgl"></span></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="follow">
+			<div class="follow_email">
+				<div class="follow_email_txt" class="txt">Stay updated</div>
+				<input class="follow_email_input" type="email" placeholder="Your email address">
+				<div class="icon_btn follow_email_button">
+					<svg class="icon icon-plus">
+						<use xlink:href="img/sprite.svg#plus"></use>
+					</svg>
+				</div>
+			</div>
+			<div class="follow_social">
+				<div class="follow_social_txt">Find us here</div>
+				<div class="icon_btn follow_social_button follow_social_fb">
+					<svg class="icon icon-fb">
+						<use xlink:href="img/sprite.svg#fb"></use>
+					</svg>
+				</div>
+				<div class="icon_btn follow_social_button follow_social_twitter">
+					<svg class="icon icon-twitter">
+						<use xlink:href="img/sprite.svg#twitter"></use>
+					</svg>
+				</div>
+				<div class="icon_btn follow_social_button follow_social_pint">
+					<svg class="icon icon-pint">
+						<use xlink:href="img/sprite.svg#pint"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="offer">
+			<div class="offer_head">
+				<ul class="offer_head_list">
+					<li class="active">What's hot?</li>
+					<li>Designers</li>
+					<li>Featured</li>
+					<li>Latest</li>
+				</ul>
+				<!-- <div class="btn offer_head_btn"><span class="tgl"></span></div> -->
+				<div class="offer_head_btn btn tgl"></div>
+			</div>
+			<div class="offer_main">
+				<ul class="offer_list">
+					<li class="offer_item">
+						<img class="offer_img" src="img/Mimosa_Lace_Dress.jpg" alt="Mimosa Lace Dress">
+						<h3>Mimosa Lace Dress</h3>
+						<div class="offer_price">$76.95</div>
+						<div class="offer_item_btn icon_btn">
+							Add to Cart
+							<svg class="icon icon-plus">
+								<use xlink:href="img/sprite.svg#plus"></use>
+							</svg>
+						</div>
+					</li>
+					<li class="offer_item">
+						<img class="offer_img" src="img/Wishvitalise_Dress.jpg" alt="Wishvitalise Dress">
+						<h3>Wishvitalise Dress</h3>
+						<div class="offer_price">$96.55</div>
+						<div class="offer_item_btn icon_btn">
+							Add to Cart
+							<svg class="icon icon-plus">
+								<use xlink:href="img/sprite.svg#plus"></use>
+							</svg>
+						</div>
+					</li>
+				</ul>
+				<div class="offer_load btn">Load more</div>
+			</div>
+		</div>
+
+	</main>
+	
+	<footer id="p_footer" class="p_footer">
+	</footer>
+
+	<script src="js/common.js"></script>
+
+</body>
+</html>

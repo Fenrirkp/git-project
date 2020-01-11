@@ -1,0 +1,45 @@
+.contain {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.cover {
+	background-position: center;
+	background-size: cover;
+}
+
+.pseudo_bg {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.contour(@color:#000, @blur: 2px) {
+	text-shadow: -1px -1px @blur @color, 1px -1px @blur @color, 1px 1px @blur @color, -1px 1px @blur @color;
+}
+
+.placeholder(@color: #000) {
+	&::-webkit-input-placeholder{color: @color;}
+	&::-moz-placeholder{color: @color;}
+	&:-moz-placeholder{color: @color;}
+	&:-ms-input-placeholder{color: @color;}
+}
+
+.relation(@width: 1, @height: 1) { // названия
+	position: relative;
+	.rel(@width, @height);
+	&:before {
+		display: block;
+		content: '';
+	}
+}
+
+.rel(@width: 1, @height: 1) { // названия
+	&:before {
+		padding-top: @height * 100% / @width;
+	}
+}
